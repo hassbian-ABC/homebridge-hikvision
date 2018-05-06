@@ -11,13 +11,21 @@ homebridge-hikvision （带假反馈，只要是通过homekit控制，重启home
 修改on.sh 和 off.sh
 
 {
+
             "accessory": "hikvision",
+            
             "name": "摄像头",
+            
             "on": "/home/pi/homebridge-hikvision/on.sh",
+            
             "off": "/home/pi/homebridge-hikvision/off.sh",
+            
             "state": "cat /home/pi/homebridge-hikvision/script.flag",
+            
             "on_value" : "0"
+            
         }
+        
     ]
 路径自己修改成你的路径
 
