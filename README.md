@@ -19,7 +19,6 @@ homebridge-hikvision （带假反馈，只要是通过homekit控制，重启home
             "on_value" : "0"
         }
     ]
-
 路径自己修改成你的路径
 
 这只是我自己玩的一个小玩意
