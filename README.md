@@ -1,5 +1,7 @@
 homebridge-hikvision （带假反馈，只要是通过homekit控制，重启homebridge会保持之前的状态）
 
+安装： npm install -g https://github.com/hassbian-ABC/homebridge-hikvision
+
 把海康摄像头的预设位置在homekit里显示为开关
 
 因为我只需要两个位置，背面和正面，背面向墙，表示不是监控状态，正面监控家里
