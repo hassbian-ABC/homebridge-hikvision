@@ -35,12 +35,21 @@ homebridge-hikvision （带假反馈，只要是通过homekit控制，重启home
 homeassistant配置
 
 只需要脚本，同样修改on.sh off.sh
+
 switch:
+
 - platform: command_line
+
   switches:
+  
     camera:
-      command_on: "/home/jiaxuan/Zhimifan/plugin/homebridge-hikvision/on.sh"
-      command_off: "/home/jiaxuan/Zhimifan/plugin/homebridge-hikvision/off.sh"
-      command_state: "cat /home/jiaxuan/Zhimifan/plugin/homebridge-hikvision/script.flag"
+    
+      command_on: "/home/pi/homebridge-hikvision/on.sh"
+      
+      command_off: "/home/pi/homebridge-hikvision/off.sh"
+      
+      command_state: "cat /home/pi/homebridge-hikvision/script.flag"
+      
       value_template: '{{ value == "0" }}'
+      
       friendly_name: camera
