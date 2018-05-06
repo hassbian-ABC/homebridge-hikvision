@@ -38,18 +38,18 @@ homeassistant配置
 
 switch:
 
-- platform: command_line
+  - platform: command_line
 
-  switches:
+    switches:
   
-    camera:
+      camera:
     
-      command_on: "/home/pi/homebridge-hikvision/on.sh"
+        command_on: "/home/pi/homebridge-hikvision/on.sh"
       
-      command_off: "/home/pi/homebridge-hikvision/off.sh"
+        command_off: "/home/pi/homebridge-hikvision/off.sh"
       
-      command_state: "cat /home/pi/homebridge-hikvision/script.flag"
+        command_state: "cat /home/pi/homebridge-hikvision/script.flag"
       
-      value_template: '{{ value == "0" }}'
+        value_template: '{{ value == "0" }}'
       
-      friendly_name: camera
+        friendly_name: camera
