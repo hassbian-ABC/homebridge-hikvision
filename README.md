@@ -30,3 +30,17 @@ homebridge-hikvision （带假反馈，只要是通过homekit控制，重启home
 路径自己修改成你的路径
 
 这只是我自己玩的一个小玩意
+
+
+homeassistant配置
+
+只需要脚本，同样修改on.sh off.sh
+switch:
+- platform: command_line
+  switches:
+    camera:
+      command_on: "/home/jiaxuan/Zhimifan/plugin/homebridge-hikvision/on.sh"
+      command_off: "/home/jiaxuan/Zhimifan/plugin/homebridge-hikvision/off.sh"
+      command_state: "cat /home/jiaxuan/Zhimifan/plugin/homebridge-hikvision/script.flag"
+      value_template: '{{ value == "0" }}'
+      friendly_name: camera
