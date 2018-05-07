@@ -1,6 +1,6 @@
 {
   "name": "homebridge-hikvision",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "hikvision for HomeBridge(https://github.com/nfarina/homebridge).",
   "keywords": [
     "homebridge-plugin"
