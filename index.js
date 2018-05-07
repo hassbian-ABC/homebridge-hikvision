@@ -30,13 +30,10 @@ hikvisionAccessory.prototype.getState = function(callback) {
   var stdout = "none";  
   if (this.stateCommand) {
     exec(command, function (error, stdout, stderr) {
-      var cleanOut=stdout.trim().toLowerCase();
-      accessory.log('State of ' + accessory.name + ' is: ' + cleanOut);
-      callback(null, cleanOut == accessory.onValue);
+      var Value=stdout.trim().toLowerCase();
+      accessory.log('海康 ' + accessory.name + ' is: ' + Value);
+      callback(null, Value == accessory.onValue);
     });
-  }
-  else {
-      accessory.log('Must set config value for fileState or state.');
   }
 }
 
@@ -61,7 +58,6 @@ hikvisionAccessory.prototype.getServices = function() {
 
   var characteristic = switchService.getCharacteristic(Characteristic.On)
   .on('set', this.setState.bind(this));
-
   if (this.stateCommand) {
     characteristic.on('get', this.getState.bind(this))
   };
