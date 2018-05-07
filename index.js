@@ -20,10 +20,8 @@ function hikvisionAccessory(log, config) {
   this.stateCommand = config['state'] || false;
   this.offCommand = config['off'];
   this.onValue = config['on_value'] || "true";
-  if (!this.fileState) {
-    this.onValue = this.onValue.trim().toLowerCase();
-  }
 }
+  
 hikvisionAccessory.prototype.getState = function(callback) {
   var accessory = this;
   var command = accessory['stateCommand'];
