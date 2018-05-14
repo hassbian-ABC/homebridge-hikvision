@@ -62,5 +62,5 @@ hikvisionAccessory.prototype.getServices = function() {
   .on('get', this.getState.bind(this));
 
 
-  return [switchService];
+  return [switchService, informationService];
 }
